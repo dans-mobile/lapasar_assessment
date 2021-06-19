@@ -1,4 +1,4 @@
-# lapasar_assessment
+# Danish Irfan Lapasar Assessment
 
 A new Flutter application.
 
