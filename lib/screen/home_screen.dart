@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                                   crossAxisCount: 2,
                                   crossAxisSpacing: 4.0,
                                   mainAxisSpacing: 4.0,
-                                  childAspectRatio: 3 / 5),
+                                  childAspectRatio: 2.5 / 5),
                           itemCount: _controller.searchedItem.length,
                           itemBuilder: (BuildContext context, int index) {
                             return InkWell(
@@ -107,7 +107,7 @@ class HomeScreen extends StatelessWidget {
                                   crossAxisCount: 2,
                                   crossAxisSpacing: 4.0,
                                   mainAxisSpacing: 4.0,
-                                  childAspectRatio: 3 / 5),
+                                  childAspectRatio: 2.5 / 5),
                           itemCount: _controller.fetchProducts.length,
                           itemBuilder: (BuildContext context, int index) {
                             return InkWell(
@@ -131,7 +131,7 @@ class HomeScreen extends StatelessWidget {
                                             if (snapshot.hasData) {
                                               return Center(
                                                 child: Container(
-                                                  height: 100,
+                                                  height: 80,
                                                   child: Image.network(
                                                     snapshot.data.toString(),
                                                     errorBuilder: (BuildContext
