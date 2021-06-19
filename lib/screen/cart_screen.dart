@@ -50,15 +50,19 @@ class _CartScreenState extends State<CartScreen> {
                                 return Center(
                                     child: CircularProgressIndicator());
                               }),
+                          SizedBox(height: 10),
+                          Text("Name",
+                              style: TextStyle(fontWeight: FontWeight.bold)),
                           Text(_controller.items[index].name),
                           SizedBox(height: 10),
+                          Text("Brand",
+                              style: TextStyle(fontWeight: FontWeight.bold)),
                           Text(_controller.items[index].brand),
                           SizedBox(height: 10),
-
-                          Text(_controller
-                              .convertMyr((_controller.items[index].price))),
-                          SizedBox(height: 10),
-                          // Image.network(_controller.getImage(_controller.fetchProducts[index]))
+                          Text("Price",
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                          Text(_controller.convertMyr(
+                              (_controller.items[index].price))),
                         ],
                       ),
                     ),

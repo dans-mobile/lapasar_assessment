@@ -76,17 +76,24 @@ class HomeScreen extends StatelessWidget {
                                                 child:
                                                     CircularProgressIndicator());
                                           }),
+                                      SizedBox(height: 10),
+                                      Text("Name",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold)),
                                       Text(
                                           _controller.searchedItem[index].name),
                                       SizedBox(height: 10),
+                                      Text("Brand",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold)),
                                       Text(_controller
                                           .searchedItem[index].brand),
                                       SizedBox(height: 10),
-
+                                      Text("Price",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold)),
                                       Text(_controller.convertMyr((_controller
                                           .searchedItem[index].price))),
-                                      SizedBox(height: 10)
-                                      // Image.network(_controller.getImage(_controller.fetchProducts[index]))
                                     ],
                                   ),
                                 ),
@@ -145,17 +152,25 @@ class HomeScreen extends StatelessWidget {
                                                 child:
                                                     CircularProgressIndicator());
                                           }),
+                                      SizedBox(height: 10),
+                                      Text("Name",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold)),
                                       Text(_controller
                                           .fetchProducts[index].name),
                                       SizedBox(height: 10),
+                                      Text("Brand",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold)),
                                       Text(_controller
                                           .fetchProducts[index].brand),
                                       SizedBox(height: 10),
-
+                                      Text("Price",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold)),
                                       Text(_controller.convertMyr((_controller
                                           .fetchProducts[index].price))),
                                       SizedBox(height: 10),
-                                      // Image.network(_controller.getImage(_controller.fetchProducts[index]))
                                     ],
                                   ),
                                 ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lapasar_assessment/controller/home_controller.dart';
-import 'package:lapasar_assessment/screen/home_screen.dart';
 
 class SearchDialog extends StatelessWidget {
   HomeController _controller = Get.find();
@@ -56,6 +55,7 @@ class SearchDialog extends StatelessWidget {
                     ),
                       onPressed: () {
                         _controller.reset();
+                        _controller.productName.text = '';
                       },
                       child: Text("Reset"))
                 ],
