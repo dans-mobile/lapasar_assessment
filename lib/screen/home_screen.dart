@@ -102,82 +102,82 @@ class HomeScreen extends StatelessWidget {
                           },
                         )
                       : GridView.builder(
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
-                                  crossAxisSpacing: 4.0,
-                                  mainAxisSpacing: 4.0,
-                                  childAspectRatio: 2.5 / 5),
-                          itemCount: _controller.fetchProducts.length,
-                          itemBuilder: (BuildContext context, int index) {
-                            return InkWell(
-                              onTap: () {
-                                print(
-                                    _controller.fetchProducts[index].toJson());
-                                _controller.addItemToCard(
-                                    _controller.fetchProducts[index]);
-                              },
-                              child: Card(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      FutureBuilder(
-                                          future: _controller.getImage(
-                                              _controller.fetchProducts[index]),
-                                          builder: (context, snapshot) {
-                                            if (snapshot.hasData) {
-                                              return Center(
-                                                child: Container(
-                                                  height: 80,
-                                                  child: Image.network(
-                                                    snapshot.data.toString(),
-                                                    errorBuilder: (BuildContext
-                                                            context,
-                                                        Object exception,
-                                                        StackTrace stackTrace) {
-                                                      return Center(
-                                                        child: Icon(Icons.image,
-                                                            size: 50),
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              );
-                                            }
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: 2,
+                                      crossAxisSpacing: 4.0,
+                                      mainAxisSpacing: 4.0,
+                                      childAspectRatio: 2.5 / 5),
+                              itemCount: _controller.fetchProducts.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return InkWell(
+                                  onTap: () {
+                                    print(
+                                        _controller.fetchProducts[index].toJson());
+                                    _controller.addItemToCard(
+                                        _controller.fetchProducts[index]);
+                                  },
+                                  child: Card(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          FutureBuilder(
+                                              future: _controller.getImage(
+                                                  _controller.fetchProducts[index]),
+                                              builder: (context, snapshot) {
+                                                if (snapshot.hasData) {
+                                                  return Center(
+                                                    child: Container(
+                                                      height: 80,
+                                                      child: Image.network(
+                                                        snapshot.data.toString(),
+                                                        errorBuilder: (BuildContext
+                                                                context,
+                                                            Object exception,
+                                                            StackTrace stackTrace) {
+                                                          return Center(
+                                                            child: Icon(Icons.image,
+                                                                size: 50),
+                                                          );
+                                                        },
+                                                      ),
+                                                    ),
+                                                  );
+                                                }
 
-                                            return Center(
-                                                child:
-                                                    CircularProgressIndicator());
-                                          }),
-                                      SizedBox(height: 10),
-                                      Text("Name",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      Text(_controller
-                                          .fetchProducts[index].name),
-                                      SizedBox(height: 10),
-                                      Text("Brand",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      Text(_controller
-                                          .fetchProducts[index].brand),
-                                      SizedBox(height: 10),
-                                      Text("Price",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold)),
-                                      Text(_controller.convertMyr((_controller
-                                          .fetchProducts[index].price))),
-                                      SizedBox(height: 10),
-                                    ],
+                                                return Center(
+                                                    child:
+                                                        CircularProgressIndicator());
+                                              }),
+                                          SizedBox(height: 10),
+                                          Text("Name",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold)),
+                                          Text(_controller
+                                              .fetchProducts[index].name),
+                                          SizedBox(height: 10),
+                                          Text("Brand",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold)),
+                                          Text(_controller
+                                              .fetchProducts[index].brand),
+                                          SizedBox(height: 10),
+                                          Text("Price",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold)),
+                                          Text(_controller.convertMyr((_controller
+                                              .fetchProducts[index].price))),
+                                          SizedBox(height: 10),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
-                            );
-                          },
-                        )),
+                                );
+                              },
+                            )),
             ),
           ),
         ),

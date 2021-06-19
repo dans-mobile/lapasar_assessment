@@ -20,9 +20,10 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     // TODO: implement onInit
+    fetchProduct();
+
     productName = TextEditingController();
 
-    fetchProduct();
     super.onInit();
   }
 
