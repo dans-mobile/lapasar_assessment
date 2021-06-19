@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                                                         StackTrace stackTrace) {
                                                       return Center(
                                                         child: Icon(Icons.image,
-                                                            size: 150),
+                                                            size: 50),
                                                       );
                                                     },
                                                   ),
