@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lapasar_assessment/controller/home_controller.dart';
 
 import 'home_screen.dart';
 
@@ -12,13 +11,11 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  HomeController _controller = Get.put(HomeController());
-
   @override
   void initState() {
     // TODO: implement initState
 
-    Timer(Duration(seconds: 2), () => Get.to(() => HomeScreen()));
+    Timer(Duration(seconds: 2), () => Get.off(() => HomeScreen()));
 
     super.initState();
   }
